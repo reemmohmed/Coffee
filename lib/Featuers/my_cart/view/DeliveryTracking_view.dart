@@ -19,7 +19,7 @@ class DeliverytrackingView extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back_ios_rounded),
           onPressed: () => Navigator.pop(context),
         ),
       ),
