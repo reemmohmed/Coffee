@@ -1,3 +1,4 @@
+import 'package:coffee_app/Featuers/my_cart/view/DeliveryTracking_view.dart';
 import 'package:flutter/material.dart';
 
 class OrderView extends StatelessWidget {
@@ -134,7 +135,16 @@ class OrderView extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return DeliverytrackingView();
+                      },
+                    ),
+                  );
+                },
                 child: Text(
                   'Order',
                   style: TextStyle(
