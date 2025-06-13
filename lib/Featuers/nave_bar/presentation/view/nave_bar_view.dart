@@ -1,6 +1,6 @@
 import 'package:coffee_app/Featuers/favourite/view/favourites_view.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/home_view.dart';
-import 'package:coffee_app/Featuers/my_cart/view/my_cart_view.dart';
+import 'package:coffee_app/Featuers/my_cart/view/order_view.dart';
 import 'package:coffee_app/Featuers/profile/view/profile_view.dart';
 import 'package:coffee_app/Featuers/nave_bar/presentation/mange/nave_bar_cubit.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class NaveBar extends StatelessWidget {
   final List<Widget> pages = [
     HomeView(),
     FavouritesView(),
-    MyCartView(),
+    OrderView(),
     ProfileView(),
   ];
 

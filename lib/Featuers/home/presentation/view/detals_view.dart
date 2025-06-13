@@ -11,7 +11,6 @@ class DetalsView extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          // صورة المنتج في الأعلى
           Stack(
             children: [
               Container(
