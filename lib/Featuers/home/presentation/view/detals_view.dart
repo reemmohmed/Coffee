@@ -1,5 +1,7 @@
 import 'package:coffee_app/core/app_Image/image_app.dart';
+import 'package:coffee_app/core/app_color.dart';
 import 'package:coffee_app/core/widgets/custom_app_bar.dart';
+import 'package:coffee_app/core/widgets/titel_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -93,31 +95,17 @@ class CustomDetalse extends StatelessWidget {
         const Spacer(),
 
         // السعر وزر الإضافة
+        TitelTextWidget(text: "price"),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: "\$",
-                    style: GoogleFonts.sora(
-                      fontSize: 20,
-                      color: const Color(0xffC67C4E),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  TextSpan(
-                    text: " 4.20",
-                    style: GoogleFonts.sora(
-                      fontSize: 28,
-                      color: const Color(0xffC67C4E),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+            TitelTextWidget(
+              text: r"$ 33.4",
+              color: AppColors.button,
+              fontSize: 30,
+              fontWeight: FontWeight.w700,
             ),
+
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xffC67C4E),
