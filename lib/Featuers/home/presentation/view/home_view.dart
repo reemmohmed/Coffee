@@ -1,7 +1,7 @@
 import 'package:coffee_app/Featuers/home/presentation/view/widget/custom_bar.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/widget/custom_grid-view.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/widget/custom_imge_center.dart';
-import 'package:coffee_app/core/widgets/subtitel_text_widget.dart';
+import 'package:coffee_app/Featuers/home/presentation/view/widget/custom_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -54,24 +54,6 @@ class HomeView extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class CustomItem extends StatelessWidget {
-  const CustomItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Colors.grey,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SubtitelTextWidget(text: "hyhydhyhstgjh"),
       ),
     );
   }
