@@ -6,12 +6,13 @@ class CustomImageCenter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Positioned(
-      top: 200,
-      left: 24,
-      right: 24,
+      top: size.height * .2,
+      left: size.width * .02,
+      right: size.width * .02,
       child: Container(
-        height: 180,
+        height: size.height * .2 / 1,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           image: const DecorationImage(

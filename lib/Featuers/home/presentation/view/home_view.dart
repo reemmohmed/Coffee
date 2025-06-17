@@ -1,60 +1,54 @@
 import 'package:coffee_app/Featuers/home/presentation/view/widget/custom_bar.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/widget/custom_grid-view.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/widget/custom_imge_center.dart';
+import 'package:coffee_app/core/widgets/subtitel_text_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-// ده مكان الصورة طبعا انت هتضبط المسار حسب مشروعك
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // الهيدر والخلفية السوداء
             Stack(
               clipBehavior: Clip.none,
-              children: [
-                Custombar(),
-
-                // البنر في المنتصف بين الأسود والأبيض
-                CustomImageCenter(),
-              ],
+              children: [Custombar(), CustomImageCenter()],
             ),
 
-            const SizedBox(height: 150),
+            SizedBox(height: size.height * .12),
 
-            // عنوان رئيسي
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 4),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 24),
+                  SizedBox(height: 12),
 
-                  // الفلاتر
                   SizedBox(
-                    height: 40,
-                    child: ListView(
+                    height: size.height * .055,
+                    child: ListView.builder(
+                      itemCount: 10,
                       scrollDirection: Axis.horizontal,
-                      children: [
-                        buildCategory("All", isActive: true),
-                        buildCategory("Cappuccino"),
-                        buildCategory("Espresso"),
-                        buildCategory("Latte"),
-                        buildCategory("Flat White"),
-                      ],
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: CustomItem(),
+                        );
+                      },
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: size.height * .01),
 
-                  // المنتجات في GridView
-                  CustomGridView(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                    child: CustomGridView(),
+                  ),
                 ],
               ),
             ),
@@ -63,24 +57,21 @@ class HomeView extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget buildCategory(String title, {bool isActive = false}) {
+class CustomItem extends StatelessWidget {
+  const CustomItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 12),
-      padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
-        color: isActive ? const Color(0xffC67C4E) : const Color(0xffF3F3F3),
         borderRadius: BorderRadius.circular(12),
+        color: Colors.grey,
       ),
-      child: Center(
-        child: Text(
-          title,
-          style: GoogleFonts.sora(
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-            color: isActive ? Colors.white : Colors.black,
-          ),
-        ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SubtitelTextWidget(text: "hyhydhyhstgjh"),
       ),
     );
   }
