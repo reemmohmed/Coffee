@@ -10,6 +10,9 @@ class DetalsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const double left = 16.0;
+    const double top = 16.0;
+    const double right = 16.0;
     return Scaffold(
       appBar: CustomAppBar(title: "details"),
 
@@ -23,7 +26,7 @@ class DetalsView extends StatelessWidget {
 
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(24),
+              padding: const EdgeInsets.fromLTRB(left, top, right, top),
               child: CustomDetalse(),
             ),
           ),
@@ -38,6 +41,8 @@ class CustomDetalse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -71,7 +76,7 @@ class CustomDetalse extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(
-          "A cappuccino is an espresso-based coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam.",
+          "A cappuccino is an espresso-based coffee drink   coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam.",
           style: GoogleFonts.sora(fontSize: 14, color: Colors.grey),
         ),
         const SizedBox(height: 24),
@@ -95,14 +100,14 @@ class CustomDetalse extends StatelessWidget {
         const Spacer(),
 
         // السعر وزر الإضافة
-        TitelTextWidget(text: "price"),
+        TitelTextWidget(text: "price", fontSize: width * 0.05),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             TitelTextWidget(
               text: r"$ 33.4",
               color: AppColors.button,
-              fontSize: 30,
+              fontSize: width * 0.07,
               fontWeight: FontWeight.w700,
             ),
 
@@ -125,7 +130,7 @@ class CustomDetalse extends StatelessWidget {
                   Text(
                     "Add to Cart",
                     style: GoogleFonts.sora(
-                      fontSize: 16,
+                      fontSize: width * 0.05,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
