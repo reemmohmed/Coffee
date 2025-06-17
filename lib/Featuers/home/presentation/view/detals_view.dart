@@ -30,6 +30,7 @@ class DetalsView extends StatelessWidget {
               child: CustomDetalse(),
             ),
           ),
+          const SizedBox(height: 16),
         ],
       ),
     );

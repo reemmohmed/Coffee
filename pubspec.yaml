@@ -30,6 +30,7 @@ environment:
 dependencies:
   bloc: ^9.0.0
   cupertino_icons: ^1.0.8
+  dotted_line: ^3.2.3
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
