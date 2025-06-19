@@ -28,10 +28,13 @@ class ProfileView extends StatelessWidget {
                 backgroundImage: AssetImage(ImageApp.onboarding),
               ),
               title: Text(
-                'John Doe',
+                'My Order',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              trailing: IconButton(icon: Icon(Icons.edit), onPressed: () {}),
+              trailing: IconButton(
+                icon: Icon(Icons.arrow_forward_ios),
+                onPressed: () {},
+              ),
             ),
           ],
         ),

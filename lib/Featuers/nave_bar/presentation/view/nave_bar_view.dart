@@ -1,4 +1,4 @@
-import 'package:coffee_app/Featuers/favourite/view/favourites_view.dart';
+import 'package:coffee_app/Featuers/favourite/view/search_view.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/home_view.dart';
 import 'package:coffee_app/Featuers/my_cart/view/cart_view.dart';
 import 'package:coffee_app/Featuers/profile/view/profile_view.dart';
@@ -13,7 +13,7 @@ class NaveBar extends StatelessWidget {
 
   final List<Widget> pages = [
     HomeView(),
-    FavouritesView(),
+    SearchView(),
     CartView(),
     ProfileView(),
   ];
@@ -59,7 +59,7 @@ class NaveBar extends StatelessWidget {
                 onTabChange: cubit.changcurrentPage,
                 tabs: const [
                   GButton(icon: Ionicons.home),
-                  GButton(icon: Ionicons.heart),
+                  GButton(icon: Ionicons.search),
                   GButton(icon: Ionicons.bag),
                   GButton(icon: Ionicons.notifications),
                 ],
