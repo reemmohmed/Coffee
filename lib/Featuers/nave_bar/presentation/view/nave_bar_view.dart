@@ -1,4 +1,4 @@
-import 'package:coffee_app/Featuers/favourite/view/search_view.dart';
+import 'package:coffee_app/Featuers/search/view/search_view.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/home_view.dart';
 import 'package:coffee_app/Featuers/my_cart/view/cart_view.dart';
 import 'package:coffee_app/Featuers/profile/view/profile_view.dart';
