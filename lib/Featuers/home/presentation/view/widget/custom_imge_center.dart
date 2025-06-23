@@ -6,6 +6,8 @@ class CustomImageCenter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage(ImageApp.banner), context);
+
     final size = MediaQuery.of(context).size;
     return Positioned(
       top: size.height * .2,

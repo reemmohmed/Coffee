@@ -10,6 +10,8 @@ class DetalsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage(ImageApp.onboarding), context);
+
     const double left = 16.0;
     const double top = 16.0;
     const double right = 16.0;

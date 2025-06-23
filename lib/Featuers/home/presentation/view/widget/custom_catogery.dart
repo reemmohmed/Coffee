@@ -9,6 +9,8 @@ class CustomCatogery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage(ImageApp.banner), context);
+
     final size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () {

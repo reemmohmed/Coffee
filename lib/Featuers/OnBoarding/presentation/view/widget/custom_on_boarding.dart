@@ -11,6 +11,8 @@ class CustomOnBoarding extends StatelessWidget {
   static const double tob = 16;
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage(ImageApp.onboarding), context);
+
     return Stack(
       children: [
         Image.asset(ImageApp.onboarding),

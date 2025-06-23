@@ -10,6 +10,8 @@ class CartView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage(ImageApp.onboarding), context);
+
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
