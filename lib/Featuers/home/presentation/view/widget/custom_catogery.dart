@@ -1,12 +1,16 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:coffee_app/Featuers/home/data/models.dart';
+import 'package:coffee_app/Featuers/home/data/product_model.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/detals_view.dart';
 import 'package:coffee_app/core/app_Image/image_app.dart';
+import 'package:coffee_app/core/widgets/Custom_image_netork.dart';
 import 'package:coffee_app/core/widgets/subtitel_text_widget.dart';
 import 'package:coffee_app/core/widgets/titel_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomCatogery extends StatelessWidget {
-  const CustomCatogery({super.key});
-
+  const CustomCatogery({super.key, required this.productModel});
+  final ProductModel productModel;
   @override
   Widget build(BuildContext context) {
     precacheImage(AssetImage(ImageApp.banner), context);
@@ -18,7 +22,7 @@ class CustomCatogery extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return DetalsView();
+              return DetalsView(productModel: productModel);
             },
           ),
         );
@@ -41,20 +45,28 @@ class CustomCatogery extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 child: AspectRatio(
                   aspectRatio: 3 / 2, //with to hight
-                  child: Image.asset(ImageApp.banner, fit: BoxFit.cover),
+                  child: CustomImageNetWork(
+                    imageUrl:
+                        productModel.image ??
+                        "https://t4.ftcdn.net/jpg/01/16/61/93/360_F_116619399_YA611bKNOW35ffK0OiyuaOcjAgXgKBui.jpg",
+                  ),
+
+                  //  Image.asset(ImageApp.banner, fit: BoxFit.cover,
                 ),
               ),
-              TitelTextWidget(text: "coffee"),
+              TitelTextWidget(text: productModel.titele ?? "coffee"),
               const SizedBox(height: 4),
               SubtitelTextWidget(
-                text: "Loderthdtajhb",
+                text: productModel.subtitel ?? "Loderthdtajhb",
                 fontWeight: FontWeight.w200,
                 color: Colors.black,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TitelTextWidget(text: r"$ 2345"),
+                  TitelTextWidget(
+                    text: productModel.price.toString() ?? r"$ 2345",
+                  ),
                   IconButton(
                     style: IconButton.styleFrom(
                       backgroundColor: Colors.brown,

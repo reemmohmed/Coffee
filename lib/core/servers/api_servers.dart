@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:coffee_app/core/servers/api_key.dart';
 import 'package:coffee_app/core/servers/failers.dart';
 import 'package:dio/dio.dart';
@@ -10,8 +12,13 @@ class ApiServers {
     ),
   );
   Future<Response> getdata(String path) async {
+    print("📣 getData CALLED!");
     try {
-      return await _dio.get(path);
+      final response = await _dio.get(path);
+      print("📡 GET Request: $path");
+      log("✅ Response data: ${response.data}");
+      return response;
+      // return await _dio.get(path);
     } on DioException catch (e) {
       // حوّل الخطأ إلى ServerFailuer وارمه
       throw ServerFailuer.fromDioException(e);

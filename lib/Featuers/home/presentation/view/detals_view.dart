@@ -1,13 +1,15 @@
+import 'package:coffee_app/Featuers/home/data/product_model.dart';
 import 'package:coffee_app/core/app_Image/image_app.dart';
 import 'package:coffee_app/core/app_color.dart';
+import 'package:coffee_app/core/widgets/Custom_image_netork.dart';
 import 'package:coffee_app/core/widgets/custom_app_bar.dart';
 import 'package:coffee_app/core/widgets/titel_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DetalsView extends StatelessWidget {
-  const DetalsView({super.key});
-
+  const DetalsView({super.key, required this.productModel});
+  final ProductModel productModel;
   @override
   Widget build(BuildContext context) {
     precacheImage(AssetImage(ImageApp.onboarding), context);
@@ -23,13 +25,17 @@ class DetalsView extends StatelessWidget {
         children: [
           AspectRatio(
             aspectRatio: 3 / 2,
-            child: Image.asset(ImageApp.onboarding, fit: BoxFit.cover),
+            child: CustomImageNetWork(
+              imageUrl:
+                  productModel.image ??
+                  "https://t4.ftcdn.net/jpg/01/16/61/93/360_F_116619399_YA611bKNOW35ffK0OiyuaOcjAgXgKBui.jpg",
+            ),
           ),
 
           Expanded(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(left, top, right, top),
-              child: CustomDetalse(),
+              child: CustomDetalse(productModel: productModel),
             ),
           ),
           const SizedBox(height: 16),
@@ -40,7 +46,8 @@ class DetalsView extends StatelessWidget {
 }
 
 class CustomDetalse extends StatelessWidget {
-  const CustomDetalse({super.key});
+  const CustomDetalse({super.key, required this.productModel});
+  final ProductModel productModel;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +57,7 @@ class CustomDetalse extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Cappuccino",
+          productModel.titele ?? "Cappuccino",
           style: GoogleFonts.sora(fontSize: 24, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 8),
@@ -74,12 +81,13 @@ class CustomDetalse extends StatelessWidget {
         ),
         const SizedBox(height: 24),
         Text(
-          "Description",
+          productModel.titele ?? "Description",
           style: GoogleFonts.sora(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 8),
         Text(
-          "A cappuccino is an espresso-based coffee drink   coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam.",
+          productModel.descrabtion ??
+              "A cappuccino is an espresso-based coffee drink   coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam.",
           style: GoogleFonts.sora(fontSize: 14, color: Colors.grey),
         ),
         const SizedBox(height: 24),
@@ -108,7 +116,7 @@ class CustomDetalse extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             TitelTextWidget(
-              text: r"$ 33.4",
+              text: productModel.price.toString() ?? r"$ 33.4",
               color: AppColors.button,
               fontSize: width * 0.07,
               fontWeight: FontWeight.w700,

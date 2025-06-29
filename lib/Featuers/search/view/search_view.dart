@@ -71,8 +71,11 @@ class SearchView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8),
             sliver: SliverGrid(
               delegate: SliverChildBuilderDelegate(
-                (context, index) => CustomCatogery(),
-                childCount: 20,
+                (context, index) => Text("data"),
+                // CustomCatogery(
+                //   productModel: ,
+                // ),
+                // childCount: 20,
               ),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
