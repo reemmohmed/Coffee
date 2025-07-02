@@ -26,7 +26,7 @@ class CustomGridView extends StatelessWidget {
             mainAxisSpacing: 15,
             crossAxisSpacing: 20,
             childAspectRatio: 0.75,
-            children: cubit.products
+            children: cubit.homeProducts
                 .map((product) => CustomCatogery(productModel: product))
                 .toList(),
           );

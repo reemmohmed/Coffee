@@ -15,8 +15,8 @@ class ApiServers {
     print("📣 getData CALLED!");
     try {
       final response = await _dio.get(path);
-      print("📡 GET Request: $path");
-      log("✅ Response data: ${response.data}");
+
+      // log("✅ Response data: ${response.data}");
       return response;
       // return await _dio.get(path);
     } on DioException catch (e) {

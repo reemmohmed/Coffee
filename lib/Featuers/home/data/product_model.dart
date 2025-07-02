@@ -5,7 +5,7 @@ class ProductModel {
   String? descrabtion;
   String? image;
   int? price;
-  String? catogerys;
+  List<String>? catogerys;
   String? subtitel;
 
   ProductModel({
@@ -28,7 +28,12 @@ class ProductModel {
     descrabtion: json['descrabtion'] as String?,
     image: json['image'] as String?,
     price: json['price'] as int?,
-    catogerys: json['catogerys'] as String?,
+    catogerys: json['catogerys'] is List
+        ? (json['catogerys'] as List).map((e) => e.toString()).toList()
+        : json['catogerys'] != null
+        ? [json['catogerys'].toString()]
+        : [],
+
     subtitel: json['subtitel'] as String?,
   );
 
