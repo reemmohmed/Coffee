@@ -1,6 +1,6 @@
 import 'package:coffee_app/Featuers/search/view/search_view.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/home_view.dart';
-import 'package:coffee_app/Featuers/my_cart/view/cart_view.dart';
+import 'package:coffee_app/Featuers/my_cart/presentation/view/cart_view.dart';
 import 'package:coffee_app/Featuers/profile/view/profile_view.dart';
 import 'package:coffee_app/Featuers/nave_bar/presentation/mange/nave_bar_cubit.dart';
 import 'package:flutter/material.dart';

@@ -31,7 +31,9 @@ class CustomGridView extends StatelessWidget {
                 .toList(),
           );
         } else {
-          return const Center(child: Text("❌ Error loading products"));
+          return const Center(
+            child: Text("Something went wrong ,\n please try again later"),
+          );
         }
       },
     );

@@ -1,5 +1,5 @@
-import 'package:coffee_app/Featuers/my_cart/view/cart_view.dart';
-import 'package:coffee_app/Featuers/my_cart/view/order_view.dart';
+import 'package:coffee_app/Featuers/my_cart/presentation/view/cart_view.dart';
+import 'package:coffee_app/Featuers/my_cart/presentation/view/order_view.dart';
 import 'package:coffee_app/Featuers/profile/view/image_circlle_avatar.dart';
 import 'package:coffee_app/Featuers/profile/view/widget/custom_list_titel.dart';
 import 'package:coffee_app/Featuers/profile/view/widget/custom_logout.dart';

@@ -18,7 +18,8 @@ class CartView extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: TitelTextWidget(
-          text: "Cart",
+          text: " Your Cart",
+          color: Color(0xff4A2B29),
           fontSize: size.width * 0.08,
           fontWeight: FontWeight.w600,
         ),
@@ -37,7 +38,7 @@ class CartView extends StatelessWidget {
             SizedBox(height: size.height * 0.02),
             CustomCouponCode(),
             SizedBox(height: size.height * 0.02),
-            CustomTax(textPrice: r"₹299", textnam: "Subtotal"),
+            CustomTax(textPrice: r"₹299", textnam: "Subtothomecal"),
             SizedBox(height: size.height * 0.02),
             CustomTax(textPrice: r"₹299", textnam: "Subtotal"),
             SizedBox(height: size.height * 0.02),

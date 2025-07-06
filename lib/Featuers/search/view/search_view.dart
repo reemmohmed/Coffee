@@ -1,10 +1,8 @@
-import 'package:coffee_app/Featuers/home/data/product_model.dart';
 import 'package:coffee_app/Featuers/home/presentation/mange/Home_Cubit/home_cubit_cubit.dart';
 import 'package:coffee_app/Featuers/home/presentation/view/widget/custom_catogery.dart';
 import 'package:coffee_app/core/app_Image/image_app.dart';
 import 'package:coffee_app/core/app_color.dart';
 import 'package:coffee_app/core/widgets/custom_text_field.dart';
-import 'package:coffee_app/core/widgets/subtitel_text_widget.dart';
 import 'package:coffee_app/core/widgets/titel_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -59,31 +57,8 @@ class SearchView extends StatelessWidget {
               SizedBox(height: size.height * 0.01),
 
               /// ✅ Categories Grid
-              BlocBuilder<HomeCubitCubit, HomeCubitState>(
-                builder: (context, state) {
-                  if (cubit.allCategories.isEmpty) {
-                    return const Text("No categories found");
-                  }
+              CustomGridCount(),
 
-                  return GridView.count(
-                    crossAxisCount: 3,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-                    childAspectRatio: 2.5,
-                    children: cubit.allCategories.map((category) {
-                      return InkWell(
-                        onTap: () => cubit.filterByCategory(category),
-                        child: CatogeriesWidget(
-                          image: ImageApp.onboarding,
-                          titel: category,
-                        ),
-                      );
-                    }).toList(),
-                  );
-                },
-              ),
               SizedBox(height: size.height * 0.02),
 
               /// ✅ Products Grid
@@ -131,6 +106,40 @@ class SearchView extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class CustomGridCount extends StatelessWidget {
+  const CustomGridCount({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final cubit = context.read<HomeCubitCubit>();
+
+    return BlocBuilder<HomeCubitCubit, HomeCubitState>(
+      builder: (context, state) {
+        if (cubit.allCategories.isEmpty) {
+          return const Text("No categories found");
+        }
+        return GridView.count(
+          crossAxisCount: 3,
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          childAspectRatio: 2.5,
+          children: cubit.allCategories.map((category) {
+            return InkWell(
+              onTap: () => cubit.filterByCategory(category),
+              child: CatogeriesWidget(
+                image: ImageApp.onboarding,
+                titel: category,
+              ),
+            );
+          }).toList(),
+        );
+      },
     );
   }
 }

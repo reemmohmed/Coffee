@@ -62,7 +62,7 @@ class HomeCubitCubit extends Cubit<HomeCubitState> {
 
   // ✅ فلترة المنتجات حسب التصنيف
   void filterByCategory(String category) {
-    searchPage = 1;
+    searchPage = 3;
     lastQuery = category;
 
     final matches = allProducts.where((product) {
@@ -84,66 +84,3 @@ class HomeCubitCubit extends Cubit<HomeCubitState> {
     }).toList();
   }
 }
-
-// class HomeCubitCubit extends Cubit<HomeCubitState> {
-//   HomeCubitCubit() : super(HomeCubitInitial());
-
-//   final ApiServers _apiServers = ApiServers();
-
-//   // 🟢 المنتجات الأصلية (لـ HomeView)
-//   List<ProductModel> products = [];
-
-//   // 🟢 نتائج البحث (لـ SearchView)
-//   List<ProductModel> searchResults = [];
-
-//   // 🟢 كل التصنيفات
-//   List<String> allCategories = [];
-
-//   // ⛳ get data (يُستخدم في HomeView)
-//   Future<void> getData() async {
-//     emit(HomeCubitLoading());
-//     try {
-//       final response = await _apiServers.getdata("product?select=*");
-//       final List<dynamic> data = response.data;
-
-//       products = data.map((item) => ProductModel.fromJson(item)).toList();
-
-//       // 🔄 استخراج كل التصنيفات من جميع المنتجات
-//       final Set<String> uniqueCategories = {};
-//       for (var product in products) {
-//         uniqueCategories.addAll(product.catogerys ?? []);
-//       }
-//       allCategories = uniqueCategories.toList();
-
-//       emit(HomeCubitSuccess());
-//     } catch (e) {
-//       emit(HomeCubitError());
-//     }
-//   }
-
-//   // 🔍 البحث في المنتجات (يُستخدم في SearchView فقط)
-//   void searchProducts(String query) {
-//     if (query.isEmpty) {
-//       searchResults = products;
-//     } else {
-//       searchResults = products.where((product) {
-//         final name = product.titele?.toLowerCase() ?? "";
-//         final catList = product.catogerys ?? [];
-//         final matchCategory = catList.any(
-//           (c) => c.toLowerCase().contains(query.toLowerCase()),
-//         );
-//         return name.contains(query.toLowerCase()) || matchCategory;
-//       }).toList();
-//     }
-//     emit(HomeCubitSuccess());
-//   }
-
-//   // 🔄 فلترة حسب كاتيجوري معين
-//   void filterByCategory(String category) {
-//     searchResults = products.where((product) {
-//       final catList = product.catogerys ?? [];
-//       return catList.contains(category);
-//     }).toList();
-//     emit(HomeCubitSuccess());
-//   }
-// }
