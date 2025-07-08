@@ -36,7 +36,7 @@ This project started as a coding task for a job application and evolved into a f
 
 [🔗 Coffee Shop Figma Design](https://www.figma.com/community/file/1207861670847748626)
 
-![Figma Design Preview](https://cdn.sanity.io/images/599r6htc/localized/4c3c9527e6a56a7fd3c6f1c2c04357d47cd25c4c-1920x1080.png)
+![Figma Design Preview](https://s3-alpha.figma.com/hub/file/5611858081/f6d71a22-9500-4920-9e61-33d64e0df429-cover.png)
 
 
 
