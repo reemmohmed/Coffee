@@ -36,7 +36,7 @@ This project started as a coding task for a job application and evolved into a f
 
 [🔗 Coffee Shop Figma Design](https://www.figma.com/community/file/1207861670847748626)
 
-![Figma Design Preview](https://s3-alpha.figma.com/hub/file/5611858081/f6d71a22-9500-4920-9e61-33d64e0df429-cover.png)
+![Figma Design Preview](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.figma.com%2Fcommunity%2Ffile%2F1116708627748807811%2Fcoffee-shop-mobile-app-design&psig=AOvVaw3x4Q2VHt1urbyh9vL1k-bF&ust=1752047751055000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjsmtXkrI4DFQAAAAAdAAAAABAE)
 
 
 
