@@ -1,21 +1,44 @@
-# Chat App
+# ☕ Coffee App
 
-This is a simple chat application built with React, Context API, and Firebase. The app allows users to join chat rooms and exchange messages in real-time.
+A responsive mobile app for ordering coffee, developed using **Flutter**, **Supabase**, and **Cubit** for state management.
 
-## Features
+This project started as a coding task for a job application and evolved into a fully functional coffee-ordering app, showcasing modern UI/UX practices and clean architecture in Flutter.
 
-- **Real-time Messaging:** Messages are sent and received instantly using Firebase Firestore.
-- **User Authentication:** Google sign-in is implemented using Firebase Authentication.
-- **Context API:** React Context API is used for state management.
+---
 
-## Tech Stack
+## 🚀 Features
 
-- **React:** JavaScript library for building user interfaces.
-- **Firebase:** Cloud-based platform for web and mobile app development.
-- **Context API:** State management solution for React applications.
-- **SCSS:** A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
+- ✨ Beautiful **Splash Screen**
+- 🏠 Responsive **Home Page** with product categories
+- 🔍 **Search Functionality** with filtering
+- 📦 **Product Details Page**
+- 🛒 **Cart Page** to manage orders
+- 🗺️ **Map View** to pick delivery location
+- 👤 Clean **Profile UI**
+- 📱 100% **Responsive Design** across all screen sizes
 
-![Chat App](./src/img/user1.png)
-![Chat User](./src/img/user2.png)
-![Login](./src/img/login.png)
-![Register](./src/img/register.png)
+---
+
+## 🧰 Tech Stack
+
+| Tool        | Description                            |
+|-------------|----------------------------------------|
+| **Flutter** | UI toolkit for cross-platform apps     |
+| **Cubit**   | Lightweight state management (Bloc)    |
+| **Supabase**| Backend service (Database + Storage)   |
+| **Google Maps** | Interactive map to pick location   |
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots from your app here. Example:
+
+| Splash Screen | Home View | Product Details |
+|---------------|-----------|-----------------|
+| ![Splash](./screenshots/splash.png) | ![Home](./screenshots/home.png) | ![Details](./screenshots/details.png) |
+
+---
+
+## 📦 Folder Structure (Optional)
+
