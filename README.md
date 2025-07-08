@@ -36,7 +36,7 @@ This project started as a coding task for a job application and evolved into a f
 
 | Splash Screen | Home View | Product Details |
 |---------------|-----------|-----------------|
-| ![Splash](./screenshots/splash.png) | ![Home](./screenshots/home.png) | ![Details](./screenshots/details.png) |
+| ![Splash](./screenshots/Cofee App.png) | ![Home](./screenshots/Home.png) | |
 
 ---
 
