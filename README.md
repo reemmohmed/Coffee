@@ -1,16 +1,21 @@
-# coffee_app
+# Chat App
 
-A new Flutter project.
+This is a simple chat application built with React, Context API, and Firebase. The app allows users to join chat rooms and exchange messages in real-time.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Real-time Messaging:** Messages are sent and received instantly using Firebase Firestore.
+- **User Authentication:** Google sign-in is implemented using Firebase Authentication.
+- **Context API:** React Context API is used for state management.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **React:** JavaScript library for building user interfaces.
+- **Firebase:** Cloud-based platform for web and mobile app development.
+- **Context API:** State management solution for React applications.
+- **SCSS:** A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Chat App](./src/img/user1.png)
+![Chat User](./src/img/user2.png)
+![Login](./src/img/login.png)
+![Register](./src/img/register.png)
