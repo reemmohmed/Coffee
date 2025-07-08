@@ -32,13 +32,12 @@ This project started as a coding task for a job application and evolved into a f
 
 ## 📸 Screenshots
 
-> Add screenshots from your app here. Example:
+> This app UI was implemented based on this Figma design:
 
-| Splash Screen | Home View | Product Details |
-|---------------|-----------|-----------------|
-| ![Splash](./screenshots/Cofee App.png) | ![Home](./screenshots/Home.png) | |
+[🔗 Coffee Shop Figma Design](https://www.figma.com/community/file/1207861670847748626)
 
----
+![Figma Design Preview](https://cdn.sanity.io/images/599r6htc/localized/4c3c9527e6a56a7fd3c6f1c2c04357d47cd25c4c-1920x1080.png)
 
-## 📦 Folder Structure (Optional)
+
+
 
